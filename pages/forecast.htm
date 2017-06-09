@@ -1,0 +1,16 @@
+<p>
+<h4><a href="#/">Back to Search</a></h4>
+</p>
+
+<h3>Forecast for {{ city }}</h3>
+<hr />
+<h4>Days: <a href="#/forecast/2" ng-class="{ 'bg-info': days === '2' }">2</a> | <a href="#/forecast/5" ng-class="{ 'bg-info': days === '5' }">5</a> | <a href="#/forecast/7" ng-class="{ 'bg-info': days === '7' }">7</a></h4>
+<hr />
+<div ng-repeat="w in weatherResult.list">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            
+            <weather-report weather-day="w" convert-to-standard="convertToFahrenheit(temp)" convert-to-date="convertToDate(dt)" date-format="MMMM d, y" convert-to-string="convertToString(desc)"></weather-report>
+        </div>
+    </div>
+</div>

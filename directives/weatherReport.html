@@ -1,0 +1,12 @@
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{ convertToDate({ dt: weatherDay.dt }) | date: dateFormat }}</h3>
+    </div>
+    <div class="panel-body ">
+        <h5>Day temperature: {{ convertToStandard({ temp: weatherDay.temp.day }) }}
+            <span class="temp-forecast"> Night temperature: {{ convertToStandard({ temp: weatherDay.temp.night }) }}</span></h5>
+        <hr />
+        <h5>Description: {{convertToString({desc: weatherDay.weather[0].description})}}</h5>
+    
+    </div>
+</div>
